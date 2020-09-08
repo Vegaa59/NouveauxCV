@@ -1,0 +1,608 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 10 px;
+}
+
+section {
+  overflow-x: hidden;
+}
+
+/* page acceuil */
+
+.page-acceuil {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400%, 400%;
+  position: relative;
+  animation: change 15s ease-in-out infinite;
+}
+
+.titre_cv {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  border: 3px solid #fff;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 3rem;
+  animation: titrecv 2s;
+}
+
+.nom {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 3rem;
+  animation: nom 3s;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  animation: apparition-sroll 6s;
+}
+
+.menu {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mouse {
+  width: 2.5rem;
+  height: 5rem;
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  pointer-events: none;
+}
+
+.mouse span {
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  display: block;
+  border-radius: 50%;
+  margin: auto;
+  animation: move-wheel 1s linear infinite;
+}
+
+.fleche span {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid transparent;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  transform: rotate(45deg);
+  animation: arrow-down 1s alternate infinite;
+}
+
+@keyframes apparition-sroll {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes move-wheel {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes arrow-down {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes titrecv {
+  0% {
+    transform: translatex(200rem);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes nom {
+  0% {
+    transform: translatex(-400rem);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 872px) {
+  .titre_cv {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .nom {
+    margin-top: 20px;
+    padding: 0rem;
+    text-align: center;
+  }
+}
+
+/*navbar */
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 10%;
+  background-color: #3a3a3a;
+  box-shadow: 0px 11px 21px 0px rgba(0, 0, 0, 0.55);
+  z-index: 9999;
+}
+
+.fixNavigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.buttontop {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.buttontop:hover {
+  color: #ffffff9f;
+  transition: 0.5s;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.nav__links li a {
+  transition: amm 9s ease 0s;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 2rem;
+}
+
+.nav__links li a:hover {
+  color: #90abdf;
+  transition: 0.5s;
+}
+
+.liseret {
+  background-color: #23a6d5;
+  background: linear-gradient(90deg,
+      rgba(9, 64, 121, 1) 0%,
+      rgba(1, 195, 244, 1) 28%,
+      rgba(1, 195, 244, 1) 72%,
+      rgba(9, 64, 121, 1) 100%);
+  height: 0.2rem;
+  box-shadow: 0px 11px 21px 0px rgba(0, 0, 0, 0.55);
+  width: 100%;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px;
+  height: 31px;
+}
+
+.toggle-button .bar {
+  height: 4px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+@media (max-width: 1104px) {
+  .navigation {
+    z-index: 1000;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .nav__links.active {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+    margin-right: 1rem;
+  }
+
+  .mouse,
+  .arrow {
+    overflow-y: hidden;
+  }
+
+  .arrow {
+    height: 2rem;
+  }
+
+}
+
+/* mon profil */
+
+.containerprofil {
+  background-color: #2c4149;
+  display: flex;
+  align-items: stretch;
+  margin-top: 5rem;
+}
+
+.contenutexte {
+  margin: auto;
+  margin-left: 4rem;
+  width: 50%;
+}
+
+.titreapropos {
+  color: #fffffffd;
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+.cadre {
+  height: 35px;
+  width: 35rem;
+  background-color: #131b25af;
+  margin-top: -2rem;
+}
+
+.presentation {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1.5rem;
+  margin-top: 7rem;
+}
+
+.soustitre {
+  color: #fff;
+  line-height: 1.5rem;
+  margin-top: 3rem;
+}
+
+.texteapropos {
+  color: #fffffffd;
+  font-size: 25px;
+  margin-top: 3rem;
+  width: auto;
+}
+
+.buttontelecharger {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border: 3px solid #fff;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  margin-top: 7rem;
+  margin-left: 8rem;
+}
+
+.buttontelecharger:hover {
+  background-color: #1313137a;
+  transition: 1s;
+  box-shadow: 0px 11px 21px 0px rgba(0, 0, 0, 0.55);
+}
+
+.imageperso {
+  background: url(images/Fichier2.png) no-repeat;
+  height: 55rem;
+  width: 33rem;
+  z-index: 1;
+  display: inline-block;
+  margin-top: 7rem;
+}
+
+.imageperso:hover {
+  background: url(images/Fichier4.png) no-repeat;
+}
+
+@media (max-width: 1204px) {
+  .imageperso {
+    display: none;
+  }
+
+  .contenutexte {
+    width: 95%;
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cadre {
+    display: none;
+  }
+
+  .texteapropos {
+    font-size: 15px;
+    text-align: justify;
+    padding: 5px;
+  }
+
+  .titreapropos {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contenutexte {
+    margin-top: 2rem;
+    margin-left: 5px;
+  }
+
+  .buttontelecharger {
+    margin-left: 9.5rem;
+  }
+
+  .presentation {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-top: 3rem;
+  }
+
+  .soustitre {
+    margin-left: 10px;
+  }
+}
+
+/* formation */
+
+.maformation {
+  background-color: #cbe7f7e3;
+  display: flex;
+  justify-content: center;
+}
+
+.contenuformation {
+  width: auto;
+  margin-top: 50px;
+}
+
+.form {
+  font-size: 3rem;
+  margin-top: 5rem;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat Subrayada", sans-serif;
+  margin-bottom: 10rem;
+}
+
+.cadreform {
+  height: 35px;
+  width: 35rem;
+  background-color: #131b25af;
+  position: absolute;
+  margin-top: -11.5rem;
+}
+
+.bloccarte {
+  display: flex;
+}
+
+.cercle {
+  width: 170px;
+  height: 170px;
+  background-color: #00c0f6;
+  border-radius: 50%;
+  margin-right: 60px;
+}
+
+.cercle:hover {
+  background-color: #5ddcff;
+  transition: 0.5s;
+}
+
+.date {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 55px;
+}
+
+.bloccarte {
+  margin-bottom: 50px;
+}
+
+.carte {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px 20px;
+  padding: 30px;
+  width: 800px;
+  text-align: left;
+}
+
+.carte h2 {
+  margin-bottom: 15px;
+}
+
+.carte:hover {
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+}
+
+.arrow {
+  margin-top: 20px;
+  height: 20px;
+  width: 15px;
+  background-color: rgb(255, 255, 255);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  z-index: 1;
+}
+
+.liseretform {
+  background-color: #00c0f6;
+  width: 1px;
+  height: 850px;
+  position: absolute;
+  margin-left: 220px;
+}
+
+.date h5 {
+  color: #fff;
+}
+
+.skill {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.competence {
+  background-color: rgb(255, 113, 19);
+  border-radius: 20px 20px;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+.competence p {
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+  .bloccarte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .liseretform {
+    display: none;
+  }
+
+  .carte {
+    width: auto;
+  }
+
+  .arrow {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    margin: auto;
+    height: 8px;
+    margin-top: 10px;
+  }
+
+  .cercle {
+    margin: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .cadreform {
+    display: none;
+  }
+}
