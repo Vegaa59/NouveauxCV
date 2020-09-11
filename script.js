@@ -98,7 +98,7 @@ sr.reveal(".arrow", {
 });
 sr.reveal(".competence", {
   origin: "bottom",
-  distance: "400px",
+  distance: "50px",
   delay: 800,
   duration: 1000,
   interval: 500,
@@ -111,12 +111,33 @@ sr.reveal(".pair", {
   distance: "500px",
   duration: 1000,
   delay: 200,
-  reset: true,
 });
 sr.reveal(".impair", {
   origin: "right",
   distance: "500px",
   duration: 1000,
   delay: 200,
-  reset: true,
+});
+
+// tiny-slider ----------------
+
+var slider = tns({
+  responsive: {
+    1200: {
+      items: 2,
+    },
+    1800: {
+      items: 3,
+    },
+  },
+  container: "#slider",
+  items: 1,
+  mouseDrag: true,
+  slideBy: "page",
+  swipeAngle: false,
+  speed: 400,
+  autoplay: true,
+  autoplayButtonOutput: false,
+  controls: false,
+  nav: false,
 });
