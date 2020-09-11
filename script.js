@@ -88,7 +88,6 @@ sr.reveal(".carte", {
   delay: 300,
   duration: 1000,
   interval: 500,
-  reset: true,
 });
 sr.reveal(".arrow", {
   origin: "right",
@@ -96,7 +95,6 @@ sr.reveal(".arrow", {
   delay: 300,
   duration: 1000,
   interval: 500,
-  reset: true,
 });
 sr.reveal(".competence", {
   origin: "bottom",
@@ -104,5 +102,21 @@ sr.reveal(".competence", {
   delay: 800,
   duration: 1000,
   interval: 500,
+});
+
+//blog-card experiences
+
+sr.reveal(".pair", {
+  origin: "left",
+  distance: "500px",
+  duration: 1000,
+  delay: 200,
+  reset: true,
+});
+sr.reveal(".impair", {
+  origin: "right",
+  distance: "500px",
+  duration: 1000,
+  delay: 200,
   reset: true,
 });
