@@ -70,7 +70,9 @@
           Mes objectifs actuels seraient de pouvoir intégrer une entreprise me
           permettant d'élargir encore mes connaissances et de pouvoir
           travailler au sein d'une équipe.</p>
-        <button class="buttontelecharger">Telercharger Mon CV</button>
+          <div class="btnpdf">
+        <button class="buttontelecharger"> <a href="/documents/"></a> Telercharger Mon CV</button>
+      </div>
       </div>
       <div class="imageperso"></div>
     </div>
@@ -288,18 +290,18 @@
       </div>
   </section>
   <section id="contact" class="contactsection">
-    <form name="mon-formulaire" action="page-envoi.html" method="post" class="wrapper">
+    <form name="mon-formulaire" action="mail.php" method="post" class="wrapper">
       <div class="title">
         <h1>Me contacter</h1>
       </div>
       <div class="contact-form">
         <div class="input-fields">
-          <input type="text" class="input" placeholder="Nom">
-          <input type="text" class="input" placeholder="Email">
-          <input type="text" class="input" placeholder="Sujet">
+          <input type="text" name="nom" class="input" placeholder="Nom">
+          <input type="email" name="email" class="input" placeholder="Email">
+          <input type="text" name="objet" class="input" placeholder="objet">
         </div>
         <div class="msg">
-          <textarea placeholder="Message"></textarea>
+          <textarea name="message" placeholder="Message"></textarea>
           <input class="btn" type="submit" value="envoyer" />
         </div>
       </div>
